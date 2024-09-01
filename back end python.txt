@@ -1,0 +1,22 @@
+from flask import Flask, render_template, request, send_file
+from fpdf import FPDF
+
+app = Flask(__name__)
+
+@app.route('/generate-cv', methods=['POST'])
+def generate_cv():
+    data = request.form
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    
+    # Add user data to the PDF
+    pdf.cell(200, 10, txt=data['name'], ln=True)
+    pdf.cell(200, 10, txt=data['email'], ln=True)
+    # Add more fields as needed
+
+    pdf.output("cv.pdf")
+    return send_file("cv.pdf")
+
+if __name__ == '__main__':
+    app.run()

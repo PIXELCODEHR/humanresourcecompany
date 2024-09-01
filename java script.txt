@@ -1,0 +1,13 @@
+function addWorkExperience() {
+  const container = document.getElementById('workExperience');
+  const newField = `
+    <div>
+      <input type="text" name="jobTitle[]" placeholder="Job Title" required>
+      <input type="text" name="company[]" placeholder="Company" required>
+      <input type="date" name="startDate[]" placeholder="Start Date" required>
+      <input type="date" name="endDate[]" placeholder="End Date" required>
+      <textarea name="responsibilities[]" placeholder="Key Responsibilities..." required></textarea>
+    </div>
+  `;
+  container.insertAdjacentHTML('beforeend', newField);
+}

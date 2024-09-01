@@ -1,0 +1,46 @@
+<form id="cvForm">
+  <!-- Personal Information -->
+  <h2>Personal Information</h2>
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="text" name="phone" placeholder="Phone Number" required>
+  <input type="url" name="linkedin" placeholder="LinkedIn Profile">
+  <input type="file" name="profilePicture" accept="image/*">
+
+  <!-- Professional Summary -->
+  <h2>Professional Summary</h2>
+  <textarea name="summary" placeholder="Write a brief professional summary..." required></textarea>
+
+  <!-- Work Experience -->
+  <h2>Work Experience</h2>
+  <div id="workExperience">
+    <input type="text" name="jobTitle[]" placeholder="Job Title" required>
+    <input type="text" name="company[]" placeholder="Company" required>
+    <input type="date" name="startDate[]" placeholder="Start Date" required>
+    <input type="date" name="endDate[]" placeholder="End Date" required>
+    <textarea name="responsibilities[]" placeholder="Key Responsibilities..." required></textarea>
+    <!-- Option to add more work experience fields dynamically -->
+  </div>
+  <button type="button" onclick="addWorkExperience()">Add More Experience</button>
+
+  <!-- Education -->
+  <h2>Education</h2>
+  <input type="text" name="degree" placeholder="Degree" required>
+  <input type="text" name="institution" placeholder="Institution" required>
+  <input type="date" name="graduationYear" placeholder="Graduation Year" required>
+
+  <!-- Skills -->
+  <h2>Skills</h2>
+  <input type="text" name="skills" placeholder="List your skills, separated by commas" required>
+
+  <!-- Certifications and Awards -->
+  <h2>Certifications and Awards</h2>
+  <textarea name="certifications" placeholder="List any certifications or awards..."></textarea>
+
+  <!-- References -->
+  <h2>References</h2>
+  <textarea name="references" placeholder="Provide references with contact information..."></textarea>
+
+  <!-- Submit Button -->
+  <button type="submit">Generate CV</button>
+</form>
